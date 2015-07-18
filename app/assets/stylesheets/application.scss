@@ -37,7 +37,8 @@ footer {
 }
 
 #books-index h3 {
-  height: 50px;
+  height: 100px;
+  margin-bottom: 5px;
 }
 
 #books-index btn {
@@ -48,6 +49,15 @@ footer {
 #books-show h2 {
   background: #f4f4f4;
   padding: 10px;
+}
+
+#books-show img {
+  width: 100%;
+  padding: 3px;
+}
+
+#books-show h3 {
+  margin-left: 10px;
 }
 
 .books-show-left {

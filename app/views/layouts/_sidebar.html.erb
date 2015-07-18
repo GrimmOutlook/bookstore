@@ -1,3 +1,12 @@
-<sidebar>
-  <h3>Sidebar stuff</h3>
-</sidebar>
+<% if params[:controller] == 'about' %>
+  <sidebar>
+    <div class="well">
+      <h3>Location Info:</h3>
+        <ul>
+          <li>Bookstore App</li>
+          <li>Your computer</li>
+          <li>On the internet</li>
+          <li><a href="http://www.something-weird.heroku.com">www.something-weird.heroku.com</a></li>
+    </div>
+  </sidebar>
+<% end %>

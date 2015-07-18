@@ -1,5 +1,4 @@
 <% if params[:controller] == 'about' %>
-  <sidebar>
     <div class="well">
       <h3>Location Info:</h3>
         <ul>
@@ -8,5 +7,14 @@
           <li>On the internet</li>
           <li><a href="http://www.something-weird.heroku.com">www.something-weird.heroku.com</a></li>
     </div>
-  </sidebar>
+<% end %>
+
+<% if params[:controller] == 'books' && params[:action] == 'index' || params[:action] == 'show' %>
+  <div class="list-group">
+    <h2>Categories:</h2>
+    <a href="#" class="list-group-item">Ruby on Rails</a>
+    <a href="#" class="list-group-item">JavaScript</a>
+    <a href="#" class="list-group-item">Database</a>
+    <a href="#" class="list-group-item">Other</a>
+  </div>
 <% end %>

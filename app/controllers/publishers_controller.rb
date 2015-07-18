@@ -21,4 +21,10 @@ class PublishersController < ApplicationController
 
   def destroy
   end
+
+  private
+    def book_params
+      params.require(:publisher).permit(:name)
+    end
+
 end

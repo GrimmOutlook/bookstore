@@ -12,9 +12,8 @@
 <% if params[:controller] == 'books' && params[:action] == 'index' || params[:action] == 'show' %>
   <div class="list-group">
     <h2>Categories:</h2>
-    <a href="#" class="list-group-item">Ruby on Rails</a>
-    <a href="#" class="list-group-item">JavaScript</a>
-    <a href="#" class="list-group-item">Database</a>
-    <a href="#" class="list-group-item">Other</a>
+      <% @categories.each do |category| %>
+        <%= link_to category.name, category_path(category.id), class: "list-group-item" %>
+      <% end %>
   </div>
 <% end %>

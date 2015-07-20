@@ -28,7 +28,7 @@ class CategoriesController < ApplicationController
   def show
     @category = Category.find(params[:id])
     @categories = Category.all
-    @books =  @category.books
+    @books =  @category.books #lists all books in a particular cat on cat/show page
   end
 
   def destroy

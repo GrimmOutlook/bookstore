@@ -23,6 +23,7 @@ class AuthorsController < ApplicationController
   end
 
   def index
+    @author = Author.all
   end
 
   def show

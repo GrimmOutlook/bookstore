@@ -1,37 +1,25 @@
 <div id="books-show">
-  <h2>PostgreSQL: Up and Running, 2nd Edition</h2>
+  <h2><%= @book.title %></h2>
     <div class="books-show-left">
-      <%= image_tag('covers/PSQL-UpandR.jpg') %>
+      <%= image_tag(@book.coverpath) %>
     </div>
     <div class="books-show-right">
       <h3>Book Information:</h3>
         <ul>
-          <li><strong>Category:</strong>&nbsp;Database</li>
-          <li><strong>Author:</strong>&nbsp;Regina O. Obe, Leo S. Hsu</li>
-          <li><strong>Publisher:</strong>&nbsp;O'Reilly Media</li>
-          <li><strong>Year:</strong>&nbsp;December 2014</li>
-          <li><strong>ISBN:</strong>&nbsp;978-1-4493-7319-1</li>
-          <li><strong>Format:</strong>&nbsp;Paperback</li>
-          <li><strong>Pages:</strong>&nbsp;234</li>
+          <li><strong>Category:</strong>&nbsp;<%= @book.category.name %></li>
+          <li><strong>Author:</strong>&nbsp;<%= @book.author.first_name %> <%= @book.author.last_name %></li>
+          <li><strong>Publisher:</strong>&nbsp;<%= @book.publisher.name %></li>
+          <li><strong>Year:</strong>&nbsp;<%= @book.year %></li>
+          <li><strong>ISBN:</strong>&nbsp;<%= @book.isbn %></li>
+          <li><strong>Format:</strong>&nbsp;<%= @book.format %></li>
+          <li><strong>Pages:</strong>&nbsp;<%= @book.pages %></li>
         </ul>
 
-        <%= link_to "Buy for $29.99", "http://shop.oreilly.com/product/0636920032144.do?", class: "btn btn-success", target: '_blank' %>
+        <%= link_to "Buy For " + "$"+@book.price.to_s, @book.buy, class: "btn btn-success", target: '_blank' %>
     </div>
+
     <div class="clearfix"></div>
       <h4>Description:</h4>
-      <p>Thinking of migrating to PostgreSQL? This clear, fast-paced introduction helps you understand and use this open source database system. Not only will you learn about the enterprise class features in versions 9.2, 9.3, and 9.4, you’ll also discover that PostgeSQL is more than a database system—it’s also an impressive application platform.</p>
+      <p><%= @book.excerpt %></p>
 
-      <p>With examples throughout, this book shows you how to achieve tasks that are difficult or impossible in other databases. This second edition covers LATERAL queries, augmented JSON support, materialized views, and other key topics. If you’re a current PostgreSQL user, you’ll pick up gems you may have missed before.</p>
-      <p>
-        <ul>
-        <li>Learn basic administration tasks such as role management, database creation, backup, and restore</li>
-        <li>Apply the psql command-line utility and the pgAdmin graphical administration tool</li>
-        <li>Explore PostgreSQL tables, constraints, and indexes</li>
-        <li>Learn powerful SQL constructs not generally found in other databases</li>
-        <li>Use several different languages to write database functions</li>
-        <li>Tune your queries to run as fast as your hardware will allow</li>
-        <li>Query external and variegated data sources with foreign data wrappers</li>
-        <li>Learn how use built-in replication filters to replicate data</li>
-        </ul>
-      </p>
 </div>

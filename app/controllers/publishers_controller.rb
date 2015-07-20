@@ -37,11 +37,9 @@ class PublishersController < ApplicationController
   end
 
   def index
-    @publisher = Publisher.all
+    @publishers = Publisher.all
   end
 
-  def show
-  end
 
   private
     def publisher_params

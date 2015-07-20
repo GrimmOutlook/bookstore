@@ -20,7 +20,7 @@ class CategoriesController < ApplicationController
     @category = Category.find(params[:id])
     @category.update(category_params)
 
-    flash[:notice] = 'category Updated'
+    flash[:notice] = 'Category Updated'
     redirect_to categories_path
   end
 
@@ -37,6 +37,7 @@ class CategoriesController < ApplicationController
   end
 
   def index
+    @categories = Category.all
   end
 
   def show
